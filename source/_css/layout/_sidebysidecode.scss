@@ -1,0 +1,40 @@
+@media only screen {
+    .sidebyside {
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+        text-align: center;
+    }
+    .sidebyside > div {
+        display: inline-table;
+    }
+    .sidebyside > div > div {
+        display: table-row;
+    }
+    .sidebyside > div > div > figure {
+        display: table-cell;
+    }
+}
+
+@media #{$medium-only} {
+    $totpad: 2*map-get($main-content, padding-right-left);
+    $sbswidth: map-get($screen, md-min) - $totpad;
+    $sbsmargin: (map-get($main-content, max-width) - $sbswidth) / 2;
+    .sidebyside {
+        width: $sbswidth;
+        margin-left: $sbsmargin;
+        margin-right: $sbsmargin;
+    }
+}
+
+@media #{$large-and-up} {
+    $totpad: 2*map-get($main-content, padding-right-left);
+    $sbswidth: map-get($screen, lg-min) - $totpad;
+    $sbsmargin: (map-get($main-content, max-width) - $sbswidth) / 2;
+    .sidebyside {
+        width: $sbswidth;
+        margin-left: $sbsmargin;
+        margin-right: $sbsmargin;
+    }
+}
