@@ -1,0 +1,9 @@
+New cover image from unsplash (i.e. CC0), https://unsplash.com/photos/11H1SSVcIxc/download
+
+$ curl -o orig.png https://images.unsplash.com/photo-1418386767268-77cdab4edcaa?q=100&fm=png
+$ cp orig.png blurred.png
+$ #gimp 2.8.10 on ubu14.04 -> filters -> gaussian blur -> 100x100px, RLE
+$ #save + overwrite
+$ mozjpeg tag v3.1, with png support, `./cjpeg -quality 75 blurred.png > blurred.jpg`
+(75 is default, but https://github.com/mozilla/mozjpeg/issues/181)
+$ cp blurred.jpg ../../source/_images/cover.jpg
