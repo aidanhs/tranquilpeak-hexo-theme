@@ -57,11 +57,13 @@
     <% if ((config.feed) && (config.feed.path.length)) { %>
         <link rel="alternative" type="application/atom+xml" title="RSS" href="<%- url_for(config.feed.path) %>">
     <% } %>
+    <% if (false) { %>
     <%- open_graph({
         type: 'blog',
         twitter_id: theme.author.twitter,
         fb_app_id: theme.fb_app_id
     }) %>
+    <% } %>
     <% if (theme.author.google_plus) { %>
         <meta rel="publisher" content="https://plus.google.com/<%= theme.author.google_plus %>"/>
     <% } %>
