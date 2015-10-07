@@ -1,0 +1,10 @@
+a.footnote {
+    outline: none;
+}
+a.footnote:before {
+    display: inline-block;
+    content: " ";
+    visibility: hidden;
+    top: -10rem;
+    position: relative;
+}
